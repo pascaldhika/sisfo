@@ -5,7 +5,6 @@ require_once '../helper/connection.php';
 $id = $_POST['id'];
 $username = $_POST['username'];
 $nama = $_POST['nama'];
-$password = $_POST['password'];
 $role = $_POST['role'];
 
 // Ambil data file
@@ -37,7 +36,13 @@ if ($error === 0) {
   }
 }
 
-$query = mysqli_query($connection, "UPDATE user SET nama = '$nama', password = '$password', role = '$role', foto = '$nama_file_baru' WHERE id = '$id'");
+if (!empty($_POST['password'])) {
+  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+  $query = mysqli_query($connection, "UPDATE user SET nama = '$nama', password = '$password', role = '$role', foto = '$nama_file_baru' WHERE id = '$id'");
+} else{
+  $query = mysqli_query($connection, "UPDATE user SET nama = '$nama', role = '$role', foto = '$nama_file_baru' WHERE id = '$id'");
+}
+
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',

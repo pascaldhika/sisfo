@@ -49,8 +49,8 @@ $query = mysqli_query($connection, "SELECT * FROM user WHERE id='$id'");
                 </tr>
 
                 <tr>
-                  <td>Foto (kosongkan jika tidak diubah)</td>
-                  <td><input class="form-control" type="file" name="foto" accept="image/*"></td>
+                  <td>Foto</td>
+                  <td><input class="form-control" type="file" name="foto" accept="image/*" required></td>
                 </tr>
                 
                 <tr>

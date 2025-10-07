@@ -4,7 +4,7 @@ require_once '../helper/connection.php';
 
 $username = $_POST['username'];
 $nama = $_POST['nama'];
-$password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $role = $_POST['role'];
 
 // Ambil data file

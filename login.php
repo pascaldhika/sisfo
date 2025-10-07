@@ -1,17 +1,24 @@
 <?php
 require_once 'helper/connection.php';
 session_start();
+$error = '';
 if (isset($_POST['submit'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $sql = "SELECT * FROM user WHERE username='$username' and password='$password' LIMIT 1";
+  $sql = "SELECT * FROM user WHERE username='$username'";
   $result = mysqli_query($connection, $sql);
 
   $row = mysqli_fetch_assoc($result);
   if ($row) {
-    $_SESSION['login'] = $row;
-    header('Location: index.php');
+    if (password_verify($password, $row['password'])) {
+      $_SESSION['login'] = $row;
+      header('Location: index.php');
+    } else{
+      $error = "Password salah!";
+    }
+  } else{
+    $error = "Username tidak ditemukan!";
   }
 }
 ?>
@@ -22,7 +29,7 @@ if (isset($_POST['submit'])) {
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Login &mdash; STMIK IDS</title>
+  <title>Login &mdash; Sistem Informasi Sekolah</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -52,6 +59,9 @@ if (isset($_POST['submit'])) {
               </div>
 
               <div class="card-body">
+                <?php if ($error): ?>
+                  <div class="alert alert-danger py-2"><?= $error ?></div>
+                <?php endif; ?>
                 <form method="POST" action="" class="needs-validation" novalidate="">
                   <div class="form-group">
                     <label for="username">Username</label>
@@ -88,7 +98,7 @@ if (isset($_POST['submit'])) {
               </div>
             </div>
             <div class="simple-footer">
-              Copyright &copy; Heri Hermawan 2021
+              Copyright &copy; Asca Dev 2025
             </div>
           </div>
         </div>
