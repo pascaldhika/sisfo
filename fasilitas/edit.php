@@ -36,6 +36,10 @@ $query = mysqli_query($connection, "SELECT * FROM fasilitas WHERE id='$id'");
                   <td>Foto (kosongkan jika tidak diubah)</td>
                   <td><input class="form-control" type="file" name="foto" accept="image/*"></td>
                 </tr>
+
+                <tr>
+                  <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                </tr>
                 
                 <tr>
                   <td>

@@ -52,6 +52,10 @@ $query = mysqli_query($connection, "SELECT * FROM user WHERE id='$id'");
                   <td>Foto</td>
                   <td><input class="form-control" type="file" name="foto" accept="image/*" required></td>
                 </tr>
+
+                <tr>
+                  <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                </tr>
                 
                 <tr>
                   <td>

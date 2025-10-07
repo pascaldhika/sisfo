@@ -2,7 +2,7 @@
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
       <a href="index.php">
-        <img src="https://ids.ac.id/wp-content/uploads/2019/11/Logo-IDS-College.png" alt="logo" width="150">
+        <img src="../assets/img/logo.png" alt="logo" width="150">
       </a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
