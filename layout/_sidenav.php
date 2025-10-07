@@ -12,13 +12,14 @@
       <li class="menu-header">Dashboard</li>
       <li><a class="nav-link" href="../"><i class="fas fa-fire"></i> <span>Home</span></a></li>
       <li class="menu-header">Menu Utama</li>
-      <li><a class="nav-link" href="../fasilitas/index.php"><i class="fas fa-columns"></i> <span>Fasilitas</span></a></li>
-      <li><a class="nav-link" href="../berita/index.php"><i class="fas fa-columns"></i> <span>Berita</span></a></li>
-      <li><a class="nav-link" href="../agenda/index.php"><i class="fas fa-columns"></i> <span>Agenda</span></a></li>
-      <li><a class="nav-link" href="../prestasi/index.php"><i class="fas fa-columns"></i> <span>Prestasi</span></a></li>
+      <li><a class="nav-link" href="../profil/index.php"><i class="fas fa-user"></i> <span>Profil</span></a></li>
+      <li><a class="nav-link" href="../fasilitas/index.php"><i class="fas fa-book"></i> <span>Fasilitas</span></a></li>
+      <li><a class="nav-link" href="../berita/index.php"><i class="fas fa-book"></i> <span>Berita</span></a></li>
+      <li><a class="nav-link" href="../agenda/index.php"><i class="fas fa-book"></i> <span>Agenda</span></a></li>
+      <li><a class="nav-link" href="../prestasi/index.php"><i class="fas fa-book"></i> <span>Prestasi</span></a></li>
 
       <?php if ($_SESSION['login']['role'] == 'admin'){ ?>
-      <li><a class="nav-link" href="../user/index.php"><i class="fas fa-columns"></i> <span>User</span></a></li>
+      <li><a class="nav-link" href="../user/index.php"><i class="fas fa-users"></i> <span>User</span></a></li>
       <?php } ?>
     </ul>
   </aside>
