@@ -4,6 +4,7 @@ require_once 'admin/helper/connection.php';
 
 $berita = mysqli_query($connection, "SELECT * FROM berita ORDER BY id DESC LIMIT 3");
 $agenda = mysqli_query($connection, "SELECT * FROM agenda ORDER BY id DESC LIMIT 4");
+$prestasi = mysqli_query($connection, "SELECT * FROM prestasi ORDER BY id DESC LIMIT 5");
 ?>
 
 <!DOCTYPE html>
@@ -127,7 +128,7 @@ $agenda = mysqli_query($connection, "SELECT * FROM agenda ORDER BY id DESC LIMIT
                 ?>
                     <!-- Item 1 -->
                     <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                        <img src="admin/berita/uploads/<?= $data['foto']; ?>" alt="Berita 1" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                        <img src="admin/berita/uploads/<?= $data['foto']; ?>" alt="<?= $data['judul']; ?>" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
                         <div class="p-4">
                             <p class="text-sm text-gray-500 mb-2">📅 <?= tanggal_indo($data['tanggal']); ?></p>
                             <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer"><a href="berita-detail.php?id=<?= $data['id']; ?>"><?= $data['judul']; ?></a></h4>
@@ -155,62 +156,30 @@ $agenda = mysqli_query($connection, "SELECT * FROM agenda ORDER BY id DESC LIMIT
             <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Prestasi Terbaru</h2>
 
             <div class="bg-white shadow p-6 space-y-4">
-                <!-- Item Prestasi -->
-                <div class="flex flex-col md:flex-row items-start md:items-center gap-4 border-b pb-4 group overflow-hidden">
-                    <div class="relative overflow-hidden w-full md:w-40 h-32">
-                        <img src="admin/prestasi/uploads/prestasi-1.png" alt="Prestasi 1"
-                            class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
+                <?php
+                while ($data = mysqli_fetch_array($prestasi)) :
+                ?>
+                    <!-- Item Prestasi -->
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4 border-b pb-4 group overflow-hidden">
+                        <div class="relative overflow-hidden w-full md:w-40 h-32">
+                            <img src="admin/prestasi/uploads/<?= $data['foto']; ?>" alt="<?= $data['nama']; ?>"
+                                class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
+                        </div>
+                        <div>
+                            <h4 class="text-gray-900 font-semibold text-base leading-tight mb-1">
+                                <?= $data['nama']; ?>
+                            </h4>
+                            <p class="text-gray-600 text-sm mb-2">
+                                <?= limitText($data['keterangan'], 120); ?>
+                            </p>
+                            <!-- <a href="prestasi1.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
+                                Baca Selengkapnya <span class="ml-1">→</span>
+                            </a> -->
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-gray-900 font-semibold text-base leading-tight mb-1">
-                            Juara 1 Lomba Olimpiade Matematika Tingkat Provinsi
-                        </h4>
-                        <p class="text-gray-600 text-sm mb-2">
-                            Siswa kelas XI IPA berhasil meraih Juara 1 dalam Olimpiade Matematika tingkat provinsi yang diselenggarakan di Surabaya.
-                        </p>
-                        <!-- <a href="prestasi1.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
-                            Baca Selengkapnya <span class="ml-1">→</span>
-                        </a> -->
-                    </div>
-                </div>
-
-                <!-- Item Prestasi -->
-                <div class="flex flex-col md:flex-row items-start md:items-center gap-4 border-b pb-4 group overflow-hidden">
-                    <div class="relative overflow-hidden w-full md:w-40 h-32">
-                        <img src="admin/prestasi/uploads/prestasi-2.png" alt="Prestasi 2"
-                            class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
-                    </div>
-                    <div>
-                        <h4 class="text-gray-900 font-semibold text-base leading-tight mb-1">
-                            Tim Futsal Sekolah Raih Medali Perak di Kejuaraan Antar SMA
-                        </h4>
-                        <p class="text-gray-600 text-sm mb-2">
-                            Tim futsal sekolah berhasil menjadi juara kedua dalam kejuaraan futsal antar SMA se-kota, setelah pertandingan final yang sengit.
-                        </p>
-                        <!-- <a href="prestasi2.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
-                            Baca Selengkapnya <span class="ml-1">→</span>
-                        </a> -->
-                    </div>
-                </div>
-
-                <!-- Item Prestasi -->
-                <div class="flex flex-col md:flex-row items-start md:items-center gap-4 border-b pb-4 group overflow-hidden">
-                    <div class="relative overflow-hidden w-full md:w-40 h-32">
-                        <img src="admin/prestasi/uploads/prestasi-3.png" alt="Prestasi 3"
-                            class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
-                    </div>
-                    <div>
-                        <h4 class="text-gray-900 font-semibold text-base leading-tight mb-1">
-                            Guru Kami Terpilih Sebagai Instruktur Nasional Kurikulum Merdeka
-                        </h4>
-                        <p class="text-gray-600 text-sm mb-2">
-                            Salah satu guru berprestasi dari sekolah ini dipercaya menjadi instruktur nasional dalam pelatihan Kurikulum Merdeka oleh Kemdikbud.
-                        </p>
-                        <!-- <a href="prestasi3.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
-                            Baca Selengkapnya <span class="ml-1">→</span>
-                        </a> -->
-                    </div>
-                </div>
+                <?php
+                endwhile;
+                ?>
             </div>
 
             <!-- Tombol Selengkapnya -->

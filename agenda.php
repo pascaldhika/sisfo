@@ -58,6 +58,8 @@ $result = mysqli_query($connection, "SELECT * FROM agenda ORDER BY id DESC");
 
     <?php include 'includes/footer.php'; ?>
 
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

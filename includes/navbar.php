@@ -2,8 +2,10 @@
 <header id="header" class="fixed top-0 left-0 w-full z-50 bg-blue-900 text-white transition-all duration-300">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div class="flex items-center space-x-3">
-            <img src="admin/assets/img/logo.png" alt="Logo Sekolah" class="rounded-full h-10">
-            <h1 class="text-xl sm:text-2xl font-bold">SMA Negeri Nusantara</h1>
+            <a href="home.php">
+                <img src="admin/assets/img/logo.png" alt="Logo Sekolah" class="rounded-full h-10">
+            </a>
+            <h1 class="text-xl sm:text-2xl font-bold"><a href="home.php">SMA Negeri Nusantara</a></h1>
         </div>
 
         <!-- Desktop Menu -->
