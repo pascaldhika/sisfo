@@ -22,6 +22,11 @@ require_once '../helper/connection.php';
               </tr>
 
               <tr>
+                <td>Tanggal</td>
+                <td><input class="form-control" type="date" name="tanggal" required></td>
+              </tr>
+
+              <tr>
                 <td>Keterangan</td>
                 <td colspan="3"><textarea class="form-control" name="keterangan" id="keterangan" required></textarea></td>
               </tr>

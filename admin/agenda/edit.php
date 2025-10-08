@@ -28,6 +28,11 @@ $query = mysqli_query($connection, "SELECT * FROM agenda WHERE id='$id'");
                 </tr>
 
                 <tr>
+                  <td>Tanggal</td>
+                  <td><input class="form-control" type="date" name="tanggal" required value="<?= $row['tanggal'] ?>"></td>
+                </tr>
+
+                <tr>
                   <td>Keterangan</td>
                   <td colspan="3"><textarea class="form-control" name="keterangan" id="keterangan" required><?= $row['keterangan'] ?></textarea></td>
                 </tr>

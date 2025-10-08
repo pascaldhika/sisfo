@@ -5,6 +5,7 @@ require_once '../helper/connection.php';
 $id = $_POST['id'];
 $judul = $_POST['judul'];
 $keterangan = $_POST['keterangan'];
+$tanggal = $_POST['tanggal'];
 
 // Ambil data file
 $nama_file = $_FILES['foto']['name'];
@@ -36,9 +37,9 @@ if ($error === 0) {
 }
 
 if (isset($nama_file_baru)) {
-  $query = mysqli_query($connection, "UPDATE agenda SET judul = '$judul', keterangan = '$keterangan', foto = '$nama_file_baru' WHERE id = '$id'");
+  $query = mysqli_query($connection, "UPDATE agenda SET judul = '$judul', tanggal = '$tanggal', keterangan = '$keterangan', foto = '$nama_file_baru' WHERE id = '$id'");
 } else{
-  $query = mysqli_query($connection, "UPDATE agenda SET judul = '$judul', keterangan = '$keterangan' WHERE id = '$id'");
+  $query = mysqli_query($connection, "UPDATE agenda SET judul = '$judul', tanggal = '$tanggal', keterangan = '$keterangan' WHERE id = '$id'");
 }
 
 if ($query) {

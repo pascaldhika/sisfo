@@ -5,6 +5,7 @@ require_once 'admin/helper/connection.php';
 $berita = mysqli_query($connection, "SELECT * FROM berita ORDER BY id DESC LIMIT 3");
 $agenda = mysqli_query($connection, "SELECT * FROM agenda ORDER BY id DESC LIMIT 4");
 $prestasi = mysqli_query($connection, "SELECT * FROM prestasi ORDER BY id DESC LIMIT 5");
+$profil = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
 ?>
 
 <!DOCTYPE html>
@@ -21,31 +22,34 @@ $prestasi = mysqli_query($connection, "SELECT * FROM prestasi ORDER BY id DESC L
     <main class="pt-0">
 
         <!-- HERO / BERANDA -->
-        <section id="beranda"
-            class="relative w-full h-[450px] sm:h-[600px] flex items-center justify-center -mt-px"
-            data-aos="fade-up">
+         <?php
+        while ($row = mysqli_fetch_array($profil)) {
+        ?>
+            <section id="beranda"
+                class="relative w-full h-[450px] sm:h-[600px] flex items-center justify-center -mt-px"
+                data-aos="fade-up">
 
-            <!-- Gambar Latar -->
-            <img src="images/hero.png" alt="Berita Utama"
-                class="absolute inset-0 w-full h-full object-cover">
+                <!-- Gambar Latar -->
+                <img src="admin/profil/uploads/<?= $row['foto'] ?>" alt="Berita Utama"
+                    class="absolute inset-0 w-full h-full object-cover">
 
-            <!-- Lapisan Gelap -->
-            <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+                <!-- Lapisan Gelap -->
+                <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
 
-            <!-- Teks Utama -->
-            <div class="relative text-center text-white px-4 sm:px-6">
-                <h2 class="text-3xl sm:text-5xl font-bold mb-3 drop-shadow-lg">
-                    Upacara Hari Pendidikan Nasional
-                </h2>
-                <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-200">
-                    SMA Negeri Nusantara memperingati Hari Pendidikan Nasional dengan semangat dan kebersamaan seluruh warga sekolah.
-                </p>
-                <button class="mt-5 sm:mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-yellow-400 text-blue-900 font-semibold hover:bg-yellow-300 transition">
-                    Baca Selengkapnya
-                </button>
-            </div>
-        </section>
-
+                <!-- Teks Utama -->
+                <div class="relative text-center text-white px-4 sm:px-6">
+                    <h2 class="text-3xl sm:text-5xl font-bold mb-3 drop-shadow-lg">
+                        Profil SMA N 1 Nusantara
+                    </h2>
+                    <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-200">
+                        <?= $row['isi'] ?>
+                    </p>
+                    <!-- <button class="mt-5 sm:mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-yellow-400 text-blue-900 font-semibold hover:bg-yellow-300 transition">
+                        Baca Selengkapnya
+                    </button> -->
+                </div>
+            </section>
+        <?php } ?>
 
         <!-- BARIS PERTAMA: SAMBUTAN + AGENDA + BANNER -->
         <section class="max-w-7xl mx-auto mt-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-6">

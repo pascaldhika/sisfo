@@ -23,6 +23,7 @@ $result = mysqli_query($connection, "SELECT * FROM berita");
                   <th>No</th>
                   <th>ID</th>
                   <th>Judul Berita</th>
+                  <th>Tanggal</th>
                   <th>Keterangan</th>
                   <th>Foto</th>
                   <th style="width: 150">Aksi</th>
@@ -38,7 +39,8 @@ $result = mysqli_query($connection, "SELECT * FROM berita");
                     <td><?= $no_urut ?></td>
                     <td><?= $data['id'] ?></td>
                     <td><?= $data['judul'] ?></td>
-                    <td><?= $data['keterangan'] ?></td>
+                    <td><?= tanggal_indo($data['tanggal']); ?></td>
+                    <td><?= limitText($data['keterangan'], 50); ?></td>
                     <td><a href="uploads/<?= $data['foto'] ?>" target="_blank"><?= $data['foto'] ?></a></td>
                     <td>
                       <?php if ($_SESSION['login']['role'] == 'admin'){ ?>

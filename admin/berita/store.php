@@ -4,6 +4,7 @@ require_once '../helper/connection.php';
 
 $judul = $_POST['judul'];
 $keterangan = $_POST['keterangan'];
+$tanggal = $_POST['tanggal'];
 
 // Ambil data file
 $nama_file = $_FILES['foto']['name'];
@@ -34,7 +35,7 @@ if ($error === 0) {
   }
 }
 
-$query = mysqli_query($connection, "insert into berita(judul, keterangan, foto) value('$judul', '$keterangan', '$nama_file_baru')");
+$query = mysqli_query($connection, "insert into berita(judul, tanggal, keterangan, foto) value('$judul', '$tanggal', '$keterangan', '$nama_file_baru')");
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',

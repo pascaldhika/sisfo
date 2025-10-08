@@ -5,7 +5,7 @@
         <!-- Kolom 1: Logo dan Deskripsi -->
         <div>
             <div class="flex items-center gap-3 mb-3">
-                <img src="images/logo.png" alt="Logo Sekolah" class="w-12 h-12">
+                <img src="admin/assets/img/logo.png" alt="Logo Sekolah" class="w-12 h-12">
                 <h4 class="text-lg font-semibold">SMA Negeri Nusantara</h4>
             </div>
             <p class="text-sm text-gray-200 leading-relaxed">
