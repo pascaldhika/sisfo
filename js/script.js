@@ -11,6 +11,15 @@ menuBtn.addEventListener('click', () => {
 
 const toTopBtn = document.getElementById("toTopBtn");
 window.addEventListener("scroll", () => {
+    const header = document.getElementById('header'); console.log(window.scrollY);
+    if (window.scrollY > 50) {
+      header.classList.remove('bg-blue-900', 'text-white');
+      header.classList.add('bg-white', 'text-gray-900', 'shadow-md');
+    } else {
+      header.classList.remove('bg-white', 'text-gray-900', 'shadow-md');
+      header.classList.add('bg-blue-900', 'text-white');
+    }
+    
     if (window.scrollY > 400) {
         toTopBtn.classList.remove("hidden");
         toTopBtn.classList.add("show");

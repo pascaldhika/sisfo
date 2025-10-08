@@ -11,7 +11,7 @@ $agenda = [
   1 => [
     'judul' => 'Lomba Sains Nasional 2025: Siswa Raih Medali Emas',
     'tanggal' => '20 September 2025',
-    'gambar' => 'images/agenda-1.png',
+    'gambar' => 'admin/agenda/uploads/agenda-1.png',
     'konten' => 'SMA Negeri Contoh kembali menorehkan prestasi gemilang pada ajang Lomba Sains Nasional 2025. 
     Salah satu siswa, Andi Wijaya, berhasil meraih medali emas pada bidang Fisika. 
     Kepala Sekolah menyampaikan rasa bangga atas pencapaian tersebut dan berharap prestasi ini bisa menjadi motivasi bagi siswa lain.'
@@ -19,14 +19,14 @@ $agenda = [
   2 => [
     'judul' => 'Seminar Nasional Guru Inovatif diikuti 50 Sekolah',
     'tanggal' => '15 September 2025',
-    'gambar' => 'images/agenda-2.png',
+    'gambar' => 'admin/agenda/uploads/agenda-2.png',
     'konten' => 'Kegiatan Seminar Nasional Guru Inovatif diadakan di Aula SMA Negeri Contoh dan diikuti oleh 50 sekolah se-Provinsi. 
     Acara ini menghadirkan narasumber dari Universitas Pendidikan Indonesia yang membahas tentang inovasi metode pembelajaran berbasis teknologi.'
   ],
   3 => [
     'judul' => 'Kegiatan Donor Darah Bersama PMI di Sekolah',
     'tanggal' => '10 September 2025',
-    'gambar' => 'images/agenda-3.png',
+    'gambar' => 'admin/agenda/uploads/agenda-3.png',
     'konten' => 'Dalam rangka memperingati Hari Kesehatan Nasional, sekolah bekerja sama dengan PMI mengadakan kegiatan donor darah. 
     Kegiatan ini diikuti oleh guru, siswa, dan masyarakat sekitar. 
     PMI mengapresiasi inisiatif sekolah dalam mendukung program kemanusiaan.'

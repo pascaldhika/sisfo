@@ -1,8 +1,8 @@
 <!-- HEADER -->
-<header class="bg-blue-700 text-white shadow-md mb-0 fixed w-full top-0 z-50">
+<header id="header" class="fixed top-0 left-0 w-full z-50 bg-blue-900 text-white transition-all duration-300">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div class="flex items-center space-x-3">
-            <img src="images/logo.png" alt="Logo Sekolah" class="rounded-full w-10 h-10">
+            <img src="admin/assets/img/logo.png" alt="Logo Sekolah" class="rounded-full h-10">
             <h1 class="text-xl sm:text-2xl font-bold">SMA Negeri Nusantara</h1>
         </div>
 

@@ -24,21 +24,21 @@
                     'id' => 1,
                     'judul' => 'Lomba Sains Nasional 2025: Siswa Raih Medali Emas',
                     'tanggal' => '20 September 2025',
-                    'gambar' => 'images/berita-1.png',
+                    'gambar' => 'admin/berita/uploads/berita-1.png',
                     'deskripsi' => 'Siswa berprestasi dari sekolah kita berhasil meraih medali emas dalam ajang Lomba Sains Nasional tingkat SMA di Jakarta.'
                     ],
                     [
                     'id' => 2,
                     'judul' => 'Seminar Nasional Guru Inovatif diikuti 50 Sekolah',
                     'tanggal' => '15 September 2025',
-                    'gambar' => 'images/berita-2.png',
+                    'gambar' => 'admin/berita/uploads/berita-2.png',
                     'deskripsi' => 'Guru-guru dari berbagai sekolah mengikuti seminar nasional dengan topik pembelajaran berbasis teknologi.'
                     ],
                     [
                     'id' => 3,
                     'judul' => 'Kegiatan Donor Darah Bersama PMI di Sekolah',
                     'tanggal' => '10 September 2025',
-                    'gambar' => 'images/berita-3.png',
+                    'gambar' => 'admin/berita/uploads/berita-3.png',
                     'deskripsi' => 'Dalam rangka memperingati Hari Kesehatan Nasional, sekolah bekerja sama dengan PMI mengadakan kegiatan donor darah.'
                     ]
                 ];

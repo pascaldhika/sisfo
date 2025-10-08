@@ -63,25 +63,25 @@
                 <div class="p-5 flex-1 overflow-y-auto">
                     <ul class="space-y-4">
                         <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="images/agenda-1.png" alt="Agenda 1" class="w-14 h-14 object-cover flex-shrink-0">
+                            <img src="admin/agenda/uploads/agenda-1.png" alt="Agenda 1" class="w-14 h-14 object-cover flex-shrink-0">
                             <a href="agenda1.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
                                 ASESMEN SUMATIF TENGAH SEMESTER GANJIL TAHUN 2025
                             </a>
                         </li>
                         <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="images/agenda-2.png" alt="Agenda 2" class="w-14 h-14 object-cover flex-shrink-0">
+                            <img src="admin/agenda/uploads/agenda-2.png" alt="Agenda 2" class="w-14 h-14 object-cover flex-shrink-0">
                             <a href="agenda2.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
                                 Pembagian Ruang Seleksi Mata Pelajaran Pilihan Coding Dan...
                             </a>
                         </li>
                         <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="images/agenda-3.png" alt="Agenda 3" class="w-14 h-14 object-cover flex-shrink-0">
+                            <img src="admin/agenda/uploads/agenda-3.png" alt="Agenda 3" class="w-14 h-14 object-cover flex-shrink-0">
                             <a href="agenda3.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
                                 Pengaturan Waktu KBM Dan Daftar Guru Tahun Pelajaran 2025/2026
                             </a>
                         </li>
                         <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="images/agenda-4.png" alt="Agenda 4" class="w-14 h-14 object-cover flex-shrink-0">
+                            <img src="admin/agenda/uploads/agenda-4.png" alt="Agenda 4" class="w-14 h-14 object-cover flex-shrink-0">
                             <a href="agenda4.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
                                 Pengumuman Susunan Kelas X / Fase E
                             </a>
@@ -130,7 +130,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Item 1 -->
                 <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="images/berita-1.png" alt="Berita 1" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                    <img src="admin/berita/uploads/berita-1.png" alt="Berita 1" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
                     <div class="p-4">
                         <p class="text-sm text-gray-500 mb-2">📅 8 Oktober 2025</p>
                         <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Upacara Hari Batik Nasional</h4>
@@ -141,7 +141,7 @@
 
                 <!-- Item 2 -->
                 <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="images/berita-2.png" alt="Berita 2" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                    <img src="admin/berita/uploads/berita-2.png" alt="Berita 2" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
                     <div class="p-4">
                         <p class="text-sm text-gray-500 mb-2">📅 6 Oktober 2025</p>
                         <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Lomba Kebersihan Kelas</h4>
@@ -152,7 +152,7 @@
 
                 <!-- Item 3 -->
                 <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="images/berita-3.png" alt="Berita 3" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                    <img src="admin/berita/uploads/berita-3.png" alt="Berita 3" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
                     <div class="p-4">
                         <p class="text-sm text-gray-500 mb-2">📅 3 Oktober 2025</p>
                         <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Pelatihan Guru Digital Learning</h4>
@@ -180,7 +180,7 @@
                 <!-- Item Prestasi -->
                 <div class="flex flex-col md:flex-row items-start md:items-center gap-4 border-b pb-4 group overflow-hidden">
                     <div class="relative overflow-hidden w-full md:w-40 h-32">
-                        <img src="images/prestasi-1.png" alt="Prestasi 1"
+                        <img src="admin/prestasi/uploads/prestasi-1.png" alt="Prestasi 1"
                             class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
                     </div>
                     <div>
@@ -199,7 +199,7 @@
                 <!-- Item Prestasi -->
                 <div class="flex flex-col md:flex-row items-start md:items-center gap-4 border-b pb-4 group overflow-hidden">
                     <div class="relative overflow-hidden w-full md:w-40 h-32">
-                        <img src="images/prestasi-2.png" alt="Prestasi 2"
+                        <img src="admin/prestasi/uploads/prestasi-2.png" alt="Prestasi 2"
                             class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
                     </div>
                     <div>
@@ -218,7 +218,7 @@
                 <!-- Item Prestasi -->
                 <div class="flex flex-col md:flex-row items-start md:items-center gap-4 border-b pb-4 group overflow-hidden">
                     <div class="relative overflow-hidden w-full md:w-40 h-32">
-                        <img src="images/prestasi-3.png" alt="Prestasi 3"
+                        <img src="admin/prestasi/uploads/prestasi-3.png" alt="Prestasi 3"
                             class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
                     </div>
                     <div>
