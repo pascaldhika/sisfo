@@ -1,3 +1,11 @@
+<?php
+require_once 'admin/helper/auth.php';
+require_once 'admin/helper/connection.php';
+
+$berita = mysqli_query($connection, "SELECT * FROM berita ORDER BY id DESC LIMIT 3");
+$agenda = mysqli_query($connection, "SELECT * FROM agenda ORDER BY id DESC LIMIT 4");
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -62,30 +70,16 @@
 
                 <div class="p-5 flex-1 overflow-y-auto">
                     <ul class="space-y-4">
-                        <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="admin/agenda/uploads/agenda-1.png" alt="Agenda 1" class="w-14 h-14 object-cover flex-shrink-0">
-                            <a href="agenda1.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
-                                ASESMEN SUMATIF TENGAH SEMESTER GANJIL TAHUN 2025
-                            </a>
-                        </li>
-                        <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="admin/agenda/uploads/agenda-2.png" alt="Agenda 2" class="w-14 h-14 object-cover flex-shrink-0">
-                            <a href="agenda2.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
-                                Pembagian Ruang Seleksi Mata Pelajaran Pilihan Coding Dan...
-                            </a>
-                        </li>
-                        <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="admin/agenda/uploads/agenda-3.png" alt="Agenda 3" class="w-14 h-14 object-cover flex-shrink-0">
-                            <a href="agenda3.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
-                                Pengaturan Waktu KBM Dan Daftar Guru Tahun Pelajaran 2025/2026
-                            </a>
-                        </li>
-                        <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
-                            <img src="admin/agenda/uploads/agenda-4.png" alt="Agenda 4" class="w-14 h-14 object-cover flex-shrink-0">
-                            <a href="agenda4.html" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700">
-                                Pengumuman Susunan Kelas X / Fase E
-                            </a>
-                        </li>
+                        <?php
+                        while ($data = mysqli_fetch_array($agenda)) :
+                        ?>
+                            <li class="flex items-center space-x-3 border-b border-gray-200 pb-3">
+                                <img src="admin/agenda/uploads/<?= $data['foto']; ?>" alt="<?= $data['judul']; ?>" class="w-14 h-14 object-cover flex-shrink-0">
+                                <a href="agenda-detail.php?id=<?= $data['id']; ?>" class="text-gray-800 text-sm font-medium leading-tight hover:text-blue-700"><?= $data['judul']; ?></a>
+                            </li>
+                        <?php
+                        endwhile;
+                        ?>
                     </ul>
                 </div>
 
@@ -128,38 +122,22 @@
             <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Berita Terbaru</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Item 1 -->
-                <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="admin/berita/uploads/berita-1.png" alt="Berita 1" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500 mb-2">📅 8 Oktober 2025</p>
-                        <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Upacara Hari Batik Nasional</h4>
-                        <p class="text-gray-600 text-sm mb-3">Siswa-siswi SMA Negeri Nusantara mengikuti upacara memperingati Hari Batik Nasional dengan mengenakan batik khas daerah masing-masing.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Baca Selengkapnya →</a>
+                <?php
+                while ($data = mysqli_fetch_array($berita)) :
+                ?>
+                    <!-- Item 1 -->
+                    <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
+                        <img src="admin/berita/uploads/<?= $data['foto']; ?>" alt="Berita 1" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <p class="text-sm text-gray-500 mb-2">📅 <?= tanggal_indo($data['tanggal']); ?></p>
+                            <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer"><a href="berita-detail.php?id=<?= $data['id']; ?>"><?= $data['judul']; ?></a></h4>
+                            <p class="text-gray-600 text-sm mb-3"><?= limitText($data['keterangan'], 120); ?></p>
+                            <a href="berita-detail.php?id=<?= $data['id']; ?>" class="text-blue-600 font-medium hover:underline">Baca Selengkapnya →</a>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="admin/berita/uploads/berita-2.png" alt="Berita 2" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500 mb-2">📅 6 Oktober 2025</p>
-                        <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Lomba Kebersihan Kelas</h4>
-                        <p class="text-gray-600 text-sm mb-3">Dalam rangka memperingati Bulan Bahasa, OSIS mengadakan lomba kebersihan kelas untuk menumbuhkan kepedulian terhadap lingkungan.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Baca Selengkapnya →</a>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="admin/berita/uploads/berita-3.png" alt="Berita 3" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500 mb-2">📅 3 Oktober 2025</p>
-                        <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Pelatihan Guru Digital Learning</h4>
-                        <p class="text-gray-600 text-sm mb-3">Guru SMA Negeri Nusantara mengikuti pelatihan penggunaan platform digital untuk mendukung pembelajaran berbasis teknologi.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Baca Selengkapnya →</a>
-                    </div>
-                </div>
+                <?php
+                endwhile;
+                ?>
             </div>
 
             <!-- Tombol Selengkapnya -->
@@ -190,9 +168,9 @@
                         <p class="text-gray-600 text-sm mb-2">
                             Siswa kelas XI IPA berhasil meraih Juara 1 dalam Olimpiade Matematika tingkat provinsi yang diselenggarakan di Surabaya.
                         </p>
-                        <a href="prestasi1.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
+                        <!-- <a href="prestasi1.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
                             Baca Selengkapnya <span class="ml-1">→</span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
@@ -209,9 +187,9 @@
                         <p class="text-gray-600 text-sm mb-2">
                             Tim futsal sekolah berhasil menjadi juara kedua dalam kejuaraan futsal antar SMA se-kota, setelah pertandingan final yang sengit.
                         </p>
-                        <a href="prestasi2.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
+                        <!-- <a href="prestasi2.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
                             Baca Selengkapnya <span class="ml-1">→</span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
@@ -228,9 +206,9 @@
                         <p class="text-gray-600 text-sm mb-2">
                             Salah satu guru berprestasi dari sekolah ini dipercaya menjadi instruktur nasional dalam pelatihan Kurikulum Merdeka oleh Kemdikbud.
                         </p>
-                        <a href="prestasi3.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
+                        <!-- <a href="prestasi3.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
                             Baca Selengkapnya <span class="ml-1">→</span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>

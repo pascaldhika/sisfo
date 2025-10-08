@@ -1,3 +1,10 @@
+<?php
+require_once 'admin/helper/auth.php';
+require_once 'admin/helper/connection.php';
+
+$result = mysqli_query($connection, "SELECT * FROM berita ORDER BY id DESC");
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -16,50 +23,27 @@
 
         <!-- Grid Berita -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
             <?php
-                // Simulasi daftar berita (nanti bisa diambil dari database)
-                $berita = [
-                    [
-                    'id' => 1,
-                    'judul' => 'Lomba Sains Nasional 2025: Siswa Raih Medali Emas',
-                    'tanggal' => '20 September 2025',
-                    'gambar' => 'admin/berita/uploads/berita-1.png',
-                    'deskripsi' => 'Siswa berprestasi dari sekolah kita berhasil meraih medali emas dalam ajang Lomba Sains Nasional tingkat SMA di Jakarta.'
-                    ],
-                    [
-                    'id' => 2,
-                    'judul' => 'Seminar Nasional Guru Inovatif diikuti 50 Sekolah',
-                    'tanggal' => '15 September 2025',
-                    'gambar' => 'admin/berita/uploads/berita-2.png',
-                    'deskripsi' => 'Guru-guru dari berbagai sekolah mengikuti seminar nasional dengan topik pembelajaran berbasis teknologi.'
-                    ],
-                    [
-                    'id' => 3,
-                    'judul' => 'Kegiatan Donor Darah Bersama PMI di Sekolah',
-                    'tanggal' => '10 September 2025',
-                    'gambar' => 'admin/berita/uploads/berita-3.png',
-                    'deskripsi' => 'Dalam rangka memperingati Hari Kesehatan Nasional, sekolah bekerja sama dengan PMI mengadakan kegiatan donor darah.'
-                    ]
-                ];
-
-                foreach ($berita as $b): ?>
+            while ($data = mysqli_fetch_array($result)) :
+            ?>
                 <div class="flex flex-col group overflow-hidden">
                     <div class="relative overflow-hidden">
-                        <img src="<?= $b['gambar']; ?>" alt="<?= $b['judul']; ?>"
+                        <img src="admin/berita/uploads/<?= $data['foto'] ?>" alt="<?= $data['judul']; ?>"
                             class="w-full h-48 object-cover transform transition duration-500 group-hover:scale-110 group-hover:brightness-90">
                     </div>
                     <div class="mt-4 flex flex-col justify-between flex-1">
-                        <h4 class="text-gray-900 font-semibold text-base leading-tight"><?= $b['judul']; ?></h4>
-                        <p class="text-sm text-gray-500 mt-1">📅 <?= $b['tanggal']; ?></p>
-                        <p class="text-gray-600 text-sm mt-2 mb-4 line-clamp-3"><?= $b['deskripsi']; ?></p>
-                        <a href="berita-detail.php?id=<?= $b['id']; ?>" 
+                        <h4 class="text-gray-900 font-semibold text-base leading-tight"><?= $data['judul']; ?></h4>
+                        <p class="text-sm text-gray-500 mt-1">📅 <?= tanggal_indo($data['tanggal']); ?></p>
+                        <p class="text-gray-600 text-sm mt-2 mb-4 line-clamp-3"><?= limitText($data['keterangan'], 120); ?></p>
+                        <a href="berita-detail.php?id=<?= $data['id']; ?>" 
                         class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
                         Baca Selengkapnya <span class="ml-1">→</span>
                         </a>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php
+            endwhile;
+            ?>
         </div>
 
         <!-- Tombol Kembali -->
