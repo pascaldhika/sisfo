@@ -90,8 +90,8 @@
                 </div>
 
                 <div class="px-5 pb-5">
-                    <a href="agenda.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
-                        READ MORE <span class="ml-1">→</span>
+                    <a href="agenda.php" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
+                        Baca Selengkapnya <span class="ml-1">→</span>
                     </a>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                         <p class="text-sm text-gray-500 mb-2">📅 8 Oktober 2025</p>
                         <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Upacara Hari Batik Nasional</h4>
                         <p class="text-gray-600 text-sm mb-3">Siswa-siswi SMA Negeri Nusantara mengikuti upacara memperingati Hari Batik Nasional dengan mengenakan batik khas daerah masing-masing.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Read More →</a>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">Baca Selengkapnya →</a>
                     </div>
                 </div>
 
@@ -146,7 +146,7 @@
                         <p class="text-sm text-gray-500 mb-2">📅 6 Oktober 2025</p>
                         <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Lomba Kebersihan Kelas</h4>
                         <p class="text-gray-600 text-sm mb-3">Dalam rangka memperingati Bulan Bahasa, OSIS mengadakan lomba kebersihan kelas untuk menumbuhkan kepedulian terhadap lingkungan.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Read More →</a>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">Baca Selengkapnya →</a>
                     </div>
                 </div>
 
@@ -157,40 +157,7 @@
                         <p class="text-sm text-gray-500 mb-2">📅 3 Oktober 2025</p>
                         <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Pelatihan Guru Digital Learning</h4>
                         <p class="text-gray-600 text-sm mb-3">Guru SMA Negeri Nusantara mengikuti pelatihan penggunaan platform digital untuk mendukung pembelajaran berbasis teknologi.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Read More →</a>
-                    </div>
-                </div>
-
-                <!-- Item 1 -->
-                <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="images/berita-1.png" alt="Berita 1" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500 mb-2">📅 8 Oktober 2025</p>
-                        <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Upacara Hari Batik Nasional</h4>
-                        <p class="text-gray-600 text-sm mb-3">Siswa-siswi SMA Negeri Nusantara mengikuti upacara memperingati Hari Batik Nasional dengan mengenakan batik khas daerah masing-masing.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Read More →</a>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="images/berita-2.png" alt="Berita 2" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500 mb-2">📅 6 Oktober 2025</p>
-                        <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Lomba Kebersihan Kelas</h4>
-                        <p class="text-gray-600 text-sm mb-3">Dalam rangka memperingati Bulan Bahasa, OSIS mengadakan lomba kebersihan kelas untuk menumbuhkan kepedulian terhadap lingkungan.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Read More →</a>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="bg-white shadow hover:shadow-md transition overflow-hidden">
-                    <img src="images/berita-3.png" alt="Berita 3" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500 mb-2">📅 3 Oktober 2025</p>
-                        <h4 class="font-semibold text-lg mb-2 hover:text-blue-600 cursor-pointer">Pelatihan Guru Digital Learning</h4>
-                        <p class="text-gray-600 text-sm mb-3">Guru SMA Negeri Nusantara mengikuti pelatihan penggunaan platform digital untuk mendukung pembelajaran berbasis teknologi.</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline">Read More →</a>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">Baca Selengkapnya →</a>
                     </div>
                 </div>
             </div>
@@ -224,7 +191,7 @@
                             Siswa kelas XI IPA berhasil meraih Juara 1 dalam Olimpiade Matematika tingkat provinsi yang diselenggarakan di Surabaya.
                         </p>
                         <a href="prestasi1.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
-                            READ MORE <span class="ml-1">→</span>
+                            Baca Selengkapnya <span class="ml-1">→</span>
                         </a>
                     </div>
                 </div>
@@ -243,7 +210,7 @@
                             Tim futsal sekolah berhasil menjadi juara kedua dalam kejuaraan futsal antar SMA se-kota, setelah pertandingan final yang sengit.
                         </p>
                         <a href="prestasi2.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
-                            READ MORE <span class="ml-1">→</span>
+                            Baca Selengkapnya <span class="ml-1">→</span>
                         </a>
                     </div>
                 </div>
@@ -262,19 +229,19 @@
                             Salah satu guru berprestasi dari sekolah ini dipercaya menjadi instruktur nasional dalam pelatihan Kurikulum Merdeka oleh Kemdikbud.
                         </p>
                         <a href="prestasi3.html" class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
-                            READ MORE <span class="ml-1">→</span>
+                            Baca Selengkapnya <span class="ml-1">→</span>
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Tombol Selengkapnya -->
-            <div class="text-center mt-6">
+            <!-- <div class="text-center mt-6">
                 <a href="prestasi.php" 
                 class="mt-5 sm:mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-yellow-400 text-blue-900 font-semibold hover:bg-yellow-300 transition">
                 Lihat Semua Prestasi
                 </a>
-            </div>
+            </div> -->
         </section>
 
 

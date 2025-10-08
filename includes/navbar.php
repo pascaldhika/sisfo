@@ -9,7 +9,7 @@
         <!-- Desktop Menu -->
         <nav class="hidden md:flex space-x-6">
             <a href="home.php" class="hover:text-yellow-300">Beranda</a>
-            <a href="#profil" class="hover:text-yellow-300">Profil</a>
+            <a href="agenda.php" class="hover:text-yellow-300">Agenda</a>
             <a href="berita.php" class="hover:text-yellow-300">Berita</a>
         </nav>
 
@@ -23,7 +23,7 @@
 
     <div id="mobile-menu" class="hidden md:hidden bg-blue-600">
         <a href="home.php" class="block px-4 py-2 hover:bg-blue-500">Beranda</a>
-        <a href="#profil" class="block px-4 py-2 hover:bg-blue-500">Profil</a>
+        <a href="agenda.php" class="block px-4 py-2 hover:bg-blue-500">Agenda</a>
         <a href="berita.php" class="block px-4 py-2 hover:bg-blue-500">Berita</a>
     </div>
 </header>

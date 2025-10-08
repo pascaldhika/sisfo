@@ -2,7 +2,7 @@
 <html lang="id">
 
 <head>
-  <?php $page_title = "Berita - SMA Negeri Nusantara"; include 'includes/head.php'; ?>
+  <?php $page_title = "Agenda - SMA Negeri Nusantara"; include 'includes/head.php'; ?>
 </head>
 
 <body class="font-sans bg-gray-50 text-gray-800">
@@ -12,38 +12,38 @@
     <!-- KONTEN UTAMA -->
     <main class="pt-28 pb-16 px-4 max-w-7xl mx-auto">
 
-        <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Daftar Berita Sekolah</h2>
+        <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Daftar Agenda Sekolah</h2>
 
         <!-- Grid Berita -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <?php
                 // Simulasi daftar berita (nanti bisa diambil dari database)
-                $berita = [
+                $agenda = [
                     [
                     'id' => 1,
                     'judul' => 'Lomba Sains Nasional 2025: Siswa Raih Medali Emas',
                     'tanggal' => '20 September 2025',
-                    'gambar' => 'images/berita-1.png',
+                    'gambar' => 'images/agenda-1.png',
                     'deskripsi' => 'Siswa berprestasi dari sekolah kita berhasil meraih medali emas dalam ajang Lomba Sains Nasional tingkat SMA di Jakarta.'
                     ],
                     [
                     'id' => 2,
                     'judul' => 'Seminar Nasional Guru Inovatif diikuti 50 Sekolah',
                     'tanggal' => '15 September 2025',
-                    'gambar' => 'images/berita-2.png',
+                    'gambar' => 'images/agenda-2.png',
                     'deskripsi' => 'Guru-guru dari berbagai sekolah mengikuti seminar nasional dengan topik pembelajaran berbasis teknologi.'
                     ],
                     [
                     'id' => 3,
                     'judul' => 'Kegiatan Donor Darah Bersama PMI di Sekolah',
                     'tanggal' => '10 September 2025',
-                    'gambar' => 'images/berita-3.png',
+                    'gambar' => 'images/agenda-3.png',
                     'deskripsi' => 'Dalam rangka memperingati Hari Kesehatan Nasional, sekolah bekerja sama dengan PMI mengadakan kegiatan donor darah.'
                     ]
                 ];
 
-                foreach ($berita as $b): ?>
+                foreach ($agenda as $b): ?>
                 <div class="flex flex-col group overflow-hidden">
                     <div class="relative overflow-hidden">
                         <img src="<?= $b['gambar']; ?>" alt="<?= $b['judul']; ?>"
@@ -53,7 +53,7 @@
                         <h4 class="text-gray-900 font-semibold text-base leading-tight"><?= $b['judul']; ?></h4>
                         <p class="text-sm text-gray-500 mt-1">📅 <?= $b['tanggal']; ?></p>
                         <p class="text-gray-600 text-sm mt-2 mb-4 line-clamp-3"><?= $b['deskripsi']; ?></p>
-                        <a href="berita-detail.php?id=<?= $b['id']; ?>" 
+                        <a href="agenda-detail.php?id=<?= $b['id']; ?>" 
                         class="text-blue-900 text-sm font-semibold hover:text-blue-700 inline-flex items-center">
                         Baca Selengkapnya <span class="ml-1">→</span>
                         </a>
