@@ -1,6 +1,9 @@
 # sistem-informasi-sekolah
 
 ## Credentials
+*  Import database dari folder admin/database/sisfo.sql
+
+## Credentials
 *  Login Admin
     Username: admin
     Password: 123456
