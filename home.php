@@ -13,7 +13,7 @@ $postingan = mysqli_query($connection, "SELECT * FROM postingan ORDER BY id DESC
 <html lang="id">
 
 <head>
-  <?php $page_title = "Beranda - SMA Negeri Nusantara"; include 'includes/head.php'; ?>
+  <?php $page_title = "Beranda"; include 'includes/head.php'; ?>
 </head>
 
 <body class="font-sans bg-gray-50 text-gray-800 relative">

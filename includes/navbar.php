@@ -8,11 +8,60 @@
             <h1 class="text-xl sm:text-2xl font-bold"><a href="home.php">SMA Negeri Nusantara</a></h1>
         </div>
 
-        <!-- Desktop Menu -->
-        <nav class="hidden md:flex space-x-6">
-            <a href="home.php" class="hover:text-yellow-300">Home</a>
-            <a href="agenda.php" class="hover:text-yellow-300">Agenda</a>
-            <a href="berita.php" class="hover:text-yellow-300">Berita</a>
+        <!-- Navbar -->
+        <nav>
+            <div class="container mx-auto flex justify-between items-center">
+            <!-- Menu Utama (Desktop) -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="home.php" class="hover:text-yellow-300 transition-colors duration-200">Home</a>
+
+                <!-- Dropdown dengan Animasi -->
+                <div class="relative group">
+                    <button class="hover:text-yellow-300 flex items-center transition-colors duration-200">
+                        Profil
+                        <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
+                            fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 mt-2 w-44 bg-white text-gray-800 rounded-lg shadow-lg 
+                                opacity-0 translate-y-2 invisible group-hover:visible group-hover:opacity-100 
+                                group-hover:translate-y-0 transition-all duration-300 ease-out">
+                        <a href="visi-misi.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Visi, Misi dan Tujuan Sekolah</a>
+                        <a href="data-guru.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Guru</a>
+                        <a href="data-siswa.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Peserta Didik</a>
+                        <a href="agenda-bulanan.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Kelas</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="hover:text-yellow-300 flex items-center transition-colors duration-200">
+                        Kesiswaan
+                        <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
+                            fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 mt-2 w-44 bg-white text-gray-800 rounded-lg shadow-lg 
+                                opacity-0 translate-y-2 invisible group-hover:visible group-hover:opacity-100 
+                                group-hover:translate-y-0 transition-all duration-300 ease-out">
+                        <a href="visi-misi.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Pendaftaran Peserta</a>
+                        <a href="agenda-mingguan.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Tata Tertib Sekolah</a>
+                    </div>
+                </div>
+
+                <a href="berita.php" class="hover:text-yellow-300 transition-colors duration-200">Berita</a>
+                <a href="agenda.php" class="hover:text-yellow-300 transition-colors duration-200">Agenda</a>
+            </div>
+            </div>
         </nav>
 
         <!-- Mobile Menu Button -->

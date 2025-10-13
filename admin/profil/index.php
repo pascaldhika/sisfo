@@ -91,3 +91,14 @@ if (isset($_SESSION['info'])) :
   $_SESSION['info'] = null;
 endif;
 ?>
+
+<script>
+  ClassicEditor
+    .create(document.querySelector('#visi_misi'), {
+      toolbar: [
+        'heading', '|', 'bold', 'italic', 'underline', 'link', 'bulletedList', 'numberedList',
+        '|', 'blockQuote', 'insertTable', 'undo', 'redo'
+      ],
+    })
+    .catch(error => console.error(error));
+</script>

@@ -10,7 +10,7 @@ $query = mysqli_query($connection, "SELECT * FROM agenda WHERE id='$id'");
 <html lang="id">
 
 <head>
-  <?php $page_title = "Agenda - SMA Negeri Nusantara";
+  <?php $page_title = "Agenda";
   include 'includes/head.php'; ?>
 </head>
 

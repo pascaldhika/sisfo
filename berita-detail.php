@@ -10,7 +10,7 @@ $query = mysqli_query($connection, "SELECT * FROM berita WHERE id='$id'");
 <html lang="id">
 
 <head>
-    <?php $page_title = "Berita - SMA Negeri Nusantara";
+    <?php $page_title = "Berita";
     include 'includes/head.php'; ?>
 </head>
 

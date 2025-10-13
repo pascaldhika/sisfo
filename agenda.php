@@ -9,7 +9,8 @@ $result = mysqli_query($connection, "SELECT * FROM agenda ORDER BY id DESC");
 <html lang="id">
 
 <head>
-  <?php $page_title = "Agenda - SMA Negeri Nusantara"; include 'includes/head.php'; ?>
+  <?php $page_title = "Agenda"; 
+  include 'includes/head.php'; ?>
 </head>
 
 <body class="font-sans bg-gray-50 text-gray-800">

@@ -15,7 +15,7 @@
       <li class="dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Profil</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../profil/index.php">Profil</a></li>
+          <li><a class="nav-link" href="../profil/index.php">Visi, Misi dan Tujuan Sekolah</a></li>
           <li><a class="nav-link" href="../guru/index.php">Data Guru</a></li>
           <li><a class="nav-link" href="../siswa/index.php">Data Siswa</a></li>
           <li><a class="nav-link" href="../kelas/index.php">Data Kelas</a></li>

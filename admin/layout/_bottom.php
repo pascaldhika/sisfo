@@ -37,6 +37,10 @@
 
 <!-- Page Specific JS File -->
 <script src="../assets/js/page/index.js"></script>
+
+<!-- Tambahkan Script CKEditor -->
+<script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js"></script>
+
 </body>
 
 </html>
