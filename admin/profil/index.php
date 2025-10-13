@@ -23,15 +23,22 @@ $query = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
               <table cellpadding="8" class="w-100">
                 
                 <tr>
+                  <td>Isi Profil</td>
                   <td><textarea class="form-control" name="isi" id="isi" required><?= $row['isi'] ?></textarea></td>
                 </tr>
 
                 <tr>
+                  <td>Visi, Misi dan Tujuan Sekolah</td>
+                  <td><textarea class="form-control" name="visi_misi" id="visi_misi" required><?= $row['visi_misi'] ?></textarea></td>
+                </tr>
+
+                <tr>
+                  <td>Foto</td>
                   <td><input class="form-control" type="file" name="foto" accept="image/*"><small> (kosongkan jika tidak diubah)</small></td>
                 </tr>
 
                 <tr>
-                    <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                  <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
                 </tr>
                 
                 <tr>

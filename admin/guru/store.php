@@ -2,8 +2,17 @@
 session_start();
 require_once '../helper/connection.php';
 
-$isi = $_POST['isi'];
-$visi_misi = $_POST['visi_misi'];
+$nip = $_POST['nip'];
+$nama = $_POST['nama'];
+$nuptk = $_POST['nuptk'];
+$nrg = $_POST['nrg'];
+$status = $_POST['status'];
+$jabatan = $_POST['jabatan'];
+$pangkat = $_POST['pangkat'];
+$pendidikan = $_POST['pendidikan'];
+$mata_pelajaran = $_POST['mata_pelajaran'];
+$jenis_kelamin = $_POST['jenis_kelamin'];
+$agama = $_POST['agama'];
 
 // Ambil data file
 $nama_file = $_FILES['foto']['name'];
@@ -34,16 +43,12 @@ if ($error === 0) {
   }
 }
 
-if (isset($nama_file_baru)) {
-  $query = mysqli_query($connection, "UPDATE profil SET isi = '$isi', visi_misi = '$visi_misi', foto = '$nama_file_baru'");
-} else{
-  $query = mysqli_query($connection, "UPDATE profil SET isi = '$isi', visi_misi = '$visi_misi'");
-}
-
+$query = mysqli_query($connection, "INSERT INTO guru (nip, nama, nuptk, nrg, status, jabatan, pangkat, pendidikan, mata_pelajaran, jenis_kelamin, agama, foto) value
+                  ('$nip', '$nama', '$nuptk', '$nrg','$status', '$jabatan', '$pangkat', '$pendidikan', '$mata_pelajaran', '$jenis_kelamin', '$agama', '$nama_file_baru')");
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',
-    'message' => 'Berhasil mengubah data'
+    'message' => 'Berhasil menambah data'
   ];
   header('Location: ./index.php');
                                             } else {
