@@ -3,12 +3,13 @@ require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
 $id = $_GET['id'];
-$query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
+$kelas = mysqli_query($connection, "SELECT * FROM kelas");
+$query = mysqli_query($connection, "SELECT * FROM siswa WHERE id='$id'");
 ?>
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>Ubah Data Guru</h1>
+    <h1>Ubah Data Siswa</h1>
     <a href="./index.php" class="btn btn-light">Kembali</a>
   </div>
   <div class="row">
@@ -23,60 +24,18 @@ $query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
               <input type="hidden" name="id" value="<?= $row['id'] ?>">
               <table cellpadding="8" class="w-100">
                 <tr>
-                  <td>NIP</td>
-                  <td><input class="form-control" type="text" name="nip" required value="<?= $row['nip'] ?>"></td>
-                </tr>
-
-                <tr>
                   <td>Nama</td>
                   <td><input class="form-control" type="text" name="nama" required value="<?= $row['nama'] ?>"></td>
                 </tr>
 
                 <tr>
-                  <td>NUPTK</td>
-                  <td><input class="form-control" type="text" name="nuptk" required value="<?= $row['nuptk'] ?>"></td>
+                  <td>NISN</td>
+                  <td><input class="form-control" type="text" name="nisn" required value="<?= $row['nisn'] ?>"></td>
                 </tr>
 
                 <tr>
-                  <td>NRG</td>
-                  <td><input class="form-control" type="text" name="nrg" required value="<?= $row['nrg'] ?>"></td>
-                </tr>
-
-                <tr>
-                  <td>Status</td>
-                  <td>
-                    <select class="form-control" name="status" required>
-                      <option value="">--Pilih Status--</option>
-                      <option value="PNS" <?= $row['status'] == 'PNS' ? 'selected' : '' ?>>PNS</option>
-                    </select>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Jabatan</td>
-                  <td><input class="form-control" type="text" name="jabatan" required value="<?= $row['jabatan'] ?>"></td>
-                </tr>
-
-                <tr>
-                  <td>Pangkat Golongan</td>
-                  <td><input class="form-control" type="text" name="pangkat" required value="<?= $row['pangkat'] ?>"></td>
-                </tr>
-
-                <tr>
-                  <td>Pendidikan</td>
-                  <td>
-                    <select class="form-control" name="pendidikan" required>
-                      <option value="">--Pilih Pendidikan--</option>
-                      <option value="D3" <?= $row['pendidikan'] == 'D3' ? 'selected' : '' ?>>D3</option>
-                      <option value="S1" <?= $row['pendidikan'] == 'S1' ? 'selected' : '' ?>>S1</option>
-                      <option value="S2" <?= $row['pendidikan'] == 'S2' ? 'selected' : '' ?>>S2</option>
-                    </select>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Mata Pelajaran</td>
-                  <td><input class="form-control" type="text" name="mata_pelajaran" required value="<?= $row['mata_pelajaran'] ?>"></td>
+                  <td>NIS</td>
+                  <td><input class="form-control" type="text" name="nis" required value="<?= $row['nis'] ?>"></td>
                 </tr>
 
                 <tr>
@@ -88,6 +47,11 @@ $query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
                       <option value="Perempuan" <?= $row['jenis_kelamin'] == 'Perempuan' ? 'selected' : '' ?>>Perempuan</option>
                     </select>
                   </td>
+                </tr>
+
+                <tr>
+                  <td>Tanggal Lahir</td>
+                  <td><input class="form-control" type="date" name="tgl_lahir" required value="<?= $row['tgl_lahir'] ?>"></td>
                 </tr>
 
                 <tr>
@@ -105,12 +69,32 @@ $query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
                 </tr>
 
                 <tr>
-                  <td>Foto (kosongkan jika tidak diubah)</td>
-                  <td><input class="form-control" type="file" name="foto" accept="image/*"></td>
+                  <td>Alamat</td>
+                  <td><textarea class="form-control" type="text" name="alamat" required><?= $row['alamat'] ?></textarea></td>
                 </tr>
 
                 <tr>
-                  <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                  <td>Kota</td>
+                  <td><input class="form-control" type="text" name="kota" required value="<?= $row['kota'] ?>"></td>
+                </tr>
+
+                <tr>
+                  <td>Kode Pos</td>
+                  <td><input class="form-control" type="text" name="kode_pos" required value="<?= $row['kode_pos'] ?>"></td>
+                </tr>
+
+                <tr>
+                  <td>Kelas</td>
+                  <td>
+                    <select class="form-control" name="kelas" required>
+                      <option value="">--Pilih Kelas--</option>
+                      <?php
+                      while ($wk = mysqli_fetch_array($kelas)) {
+                      ?>
+                        <option value="<?= $wk['nama'] ?>" <?= $wk['nama'] == $row['kelas'] ? 'selected' : '' ?>><?= $wk['nama'] ?></option>
+                      <?php } ?>
+                    </select>
+                  </td>
                 </tr>
                 
                 <tr>

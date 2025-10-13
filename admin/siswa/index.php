@@ -2,12 +2,12 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$result = mysqli_query($connection, "SELECT * FROM guru");
+$result = mysqli_query($connection, "SELECT * FROM siswa");
 ?>
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>List Guru</h1>
+    <h1>List Siswa</h1>
     <?php if ($_SESSION['login']['role'] == 'admin'){ ?>
       <a href="./create.php" class="btn btn-primary">Tambah Data</a>
     <?php } ?>
@@ -22,9 +22,8 @@ $result = mysqli_query($connection, "SELECT * FROM guru");
                 <tr>
                   <th>No</th>
                   <th>ID</th>
+                  <th>NISN</th>
                   <th>Nama</th>
-                  <th>NIP</th>
-                  <th>Foto</th>
                   <th style="width: 150">Aksi</th>
                 </tr>
               </thead>
@@ -37,9 +36,8 @@ $result = mysqli_query($connection, "SELECT * FROM guru");
                   <tr>
                     <td><?= $no_urut ?></td>
                     <td><?= $data['id'] ?></td>
+                    <td><?= $data['nisn'] ?></td>
                     <td><?= $data['nama'] ?></td>
-                    <td><?= $data['nip'] ?></td>
-                    <td><a href="uploads/<?= $data['foto'] ?>" target="_blank"><?= $data['foto'] ?></a></td>
                     <td>
                       <?php if ($_SESSION['login']['role'] == 'admin'){ ?>
                         <a class="btn btn-sm btn-info" href="edit.php?id=<?= $data['id'] ?>">

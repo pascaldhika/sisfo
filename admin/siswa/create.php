@@ -1,6 +1,8 @@
 <?php
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
+
+$kelas = mysqli_query($connection, "SELECT * FROM kelas");
 ?>
 
 <section class="section">
@@ -22,50 +24,13 @@ require_once '../helper/connection.php';
               </tr>
 
               <tr>
-                <td>NUPTK</td>
-                <td><input class="form-control" type="text" name="nuptk" required></td>
+                <td>NISN</td>
+                <td><input class="form-control" type="text" name="nisn" required></td>
               </tr>
 
               <tr>
-                <td>NRG</td>
-                <td><input class="form-control" type="text" name="nrg" required></td>
-              </tr>
-
-              <tr>
-                <td>Status</td>
-                <td>
-                  <select class="form-control" name="status" required>
-                    <option value="">--Pilih Status--</option>
-                    <option value="PNS">PNS</option>
-                  </select>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Jabatan</td>
-                <td><input class="form-control" type="text" name="jabatan" required></td>
-              </tr>
-
-              <tr>
-                <td>Pangkat Golongan</td>
-                <td><input class="form-control" type="text" name="pangkat" required></td>
-              </tr>
-
-              <tr>
-                <td>Pendidikan</td>
-                <td>
-                  <select class="form-control" name="pendidikan" required>
-                    <option value="">--Pilih Pendidikan--</option>
-                    <option value="D3">D3</option>
-                    <option value="S1">S1</option>
-                    <option value="S2">S2</option>
-                  </select>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Mata Pelajaran</td>
-                <td><input class="form-control" type="text" name="mata_pelajaran" required></td>
+                <td>NIS</td>
+                <td><input class="form-control" type="text" name="nis" required></td>
               </tr>
 
               <tr>
@@ -77,6 +42,11 @@ require_once '../helper/connection.php';
                     <option value="Perempuan">Perempuan</option>
                   </select>
                 </td>
+              </tr>
+
+              <tr>
+                <td>Tanggal Lahir</td>
+                <td><input class="form-control" type="date" name="tgl_lahir" required></td>
               </tr>
 
               <tr>
@@ -94,8 +64,32 @@ require_once '../helper/connection.php';
               </tr>
 
               <tr>
-                <td>Foto</td>
-                <td><input class="form-control" type="file" name="foto" accept="image/*" required></td>
+                <td>Alamat</td>
+                <td><textarea class="form-control" type="text" name="alamat" required></textarea></td>
+              </tr>
+
+              <tr>
+                <td>Kota</td>
+                <td><input class="form-control" type="text" name="kota" required></td>
+              </tr>
+
+              <tr>
+                <td>Kode Pos</td>
+                <td><input class="form-control" type="text" name="kode_pos" required></td>
+              </tr>
+
+              <tr>
+                <td>Kelas</td>
+                <td>
+                  <select class="form-control" name="kelas" required>
+                    <option value="">--Pilih Kelas--</option>
+                    <?php
+                    while ($row = mysqli_fetch_array($kelas)) {
+                    ?>
+                      <option value="<?= $row['nama'] ?>"><?= $row['nama'] ?></option>
+                    <?php } ?>
+                  </select>
+                </td>
               </tr>
               
               <tr>
