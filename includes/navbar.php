@@ -34,7 +34,8 @@
                         <a href="visi-misi.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Visi, Misi dan Tujuan Sekolah</a>
                         <a href="data-guru.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Guru</a>
                         <a href="data-siswa.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Peserta Didik</a>
-                        <a href="agenda-bulanan.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Kelas</a>
+                        <a href="data-kelas.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Kelas</a>
+                        <a href="struktur-organisasi.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Struktur Organisasi</a>
                     </div>
                 </div>
 
@@ -53,8 +54,8 @@
                     <div class="absolute left-0 mt-2 w-44 bg-white text-gray-800 rounded-lg shadow-lg 
                                 opacity-0 translate-y-2 invisible group-hover:visible group-hover:opacity-100 
                                 group-hover:translate-y-0 transition-all duration-300 ease-out">
-                        <a href="visi-misi.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Pendaftaran Peserta</a>
-                        <a href="agenda-mingguan.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Tata Tertib Sekolah</a>
+                        <a href="pendaftaran.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Pendaftaran Peserta Didik Baru</a>
+                        <a href="tata-tertib.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Tata Tertib Sekolah</a>
                     </div>
                 </div>
 

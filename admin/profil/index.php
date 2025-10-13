@@ -28,17 +28,38 @@ $query = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
                 </tr>
 
                 <tr>
-                  <td>Visi, Misi dan Tujuan Sekolah</td>
-                  <td><textarea class="form-control" name="visi_misi" id="visi_misi" required><?= $row['visi_misi'] ?></textarea></td>
-                </tr>
-
-                <tr>
-                  <td>Foto</td>
+                  <td>Foto Header</td>
                   <td><input class="form-control" type="file" name="foto" accept="image/*"><small> (kosongkan jika tidak diubah)</small></td>
                 </tr>
 
                 <tr>
+                  <td></td>
                   <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                </tr>
+
+                <tr>
+                  <td>Visi, Misi dan Tujuan Sekolah</td>
+                  <td><textarea class="form-control" name="visi_misi" id="visi_misi"><?= $row['visi_misi'] ?></textarea></td>
+                </tr>
+
+                <tr>
+                  <td>Informasi Pendafaran</td>
+                  <td><textarea class="form-control" name="pendaftaran" id="pendaftaran"><?= $row['pendaftaran'] ?></textarea></td>
+                </tr>
+
+                <tr>
+                  <td>Tata Tertib Sekolah</td>
+                  <td><textarea class="form-control" name="tata_tertib" id="tata_tertib"><?= $row['tata_tertib'] ?></textarea></td>
+                </tr>
+
+                <tr>
+                  <td>Struktur Organisasi</td>
+                  <td><input class="form-control" type="file" name="struktur" accept="image/*"><small> (kosongkan jika tidak diubah)</small></td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td><img src="uploads/<?= $row['struktur'] ?>" alt="logo" width="300"></td>
                 </tr>
                 
                 <tr>
@@ -95,6 +116,24 @@ endif;
 <script>
   ClassicEditor
     .create(document.querySelector('#visi_misi'), {
+      toolbar: [
+        'heading', '|', 'bold', 'italic', 'underline', 'link', 'bulletedList', 'numberedList',
+        '|', 'blockQuote', 'insertTable', 'undo', 'redo'
+      ],
+    })
+    .catch(error => console.error(error));
+
+  ClassicEditor
+    .create(document.querySelector('#pendaftaran'), {
+      toolbar: [
+        'heading', '|', 'bold', 'italic', 'underline', 'link', 'bulletedList', 'numberedList',
+        '|', 'blockQuote', 'insertTable', 'undo', 'redo'
+      ],
+    })
+    .catch(error => console.error(error));
+
+  ClassicEditor
+    .create(document.querySelector('#tata_tertib'), {
       toolbar: [
         'heading', '|', 'bold', 'italic', 'underline', 'link', 'bulletedList', 'numberedList',
         '|', 'blockQuote', 'insertTable', 'undo', 'redo'

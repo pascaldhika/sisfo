@@ -43,6 +43,7 @@ $query = mysqli_query($connection, "SELECT * FROM berita WHERE id='$id'");
                 </tr>
 
                 <tr>
+                  <td></td>
                   <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
                 </tr>
                 

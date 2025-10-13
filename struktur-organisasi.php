@@ -9,7 +9,7 @@ $query = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
 <html lang="id">
 
 <head>
-  <?php $page_title = "Visi, Misi dan Tujuan Sekolah";
+  <?php $page_title = "Struktur Organisasi";
   include 'includes/head.php'; ?>
 </head>
 
@@ -19,13 +19,13 @@ $query = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
 
   <!-- KONTEN UTAMA -->
   <main class="pt-28 pb-16 px-4 max-w-7xl mx-auto">
-    
+
     <section class="max-w-4xl mx-auto mt-10 px-4">
       <?php
       while ($row = mysqli_fetch_array($query)) {
       ?>
-        <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Visi, Misi dan Tujuan Sekolah</h2>
-        <p><?= $row['visi_misi']; ?></p>
+        <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Struktur Organisasi</h2>
+        <img src="admin/profil/uploads/<?= $row['struktur'] ?>" alt="" class="w-full h-full object-cover mt-4 mb-6">
       <?php } ?>
     </section>
 
