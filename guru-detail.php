@@ -3,14 +3,14 @@ require_once 'admin/helper/auth.php';
 require_once 'admin/helper/connection.php';
 
 $id = $_GET['id'];
-$query = mysqli_query($connection, "SELECT * FROM siswa WHERE id='$id'");
+$query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <?php $page_title = "Detail Siswa";
+    <?php $page_title = "Detail Guru";
     include 'includes/head.php'; ?>
 
     <!-- Tambahkan CSS DataTables & Bootstrap -->
@@ -25,65 +25,67 @@ $query = mysqli_query($connection, "SELECT * FROM siswa WHERE id='$id'");
     <main class="pt-28 pb-16 px-4 max-w-7xl mx-auto">
 
         <section class="max-w-4xl mx-auto mt-10 px-4">
-            <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Detail Data Peserta Didik</h2>
+            <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Detail Data Guru</h2>
             <div class="table-responsive">
                 <table class="table table-hover w-100">
-                    <thead style="display: none;">
-                        <tr>
-                            <th>#</th>
-                            <th>#</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <?php
                         while ($data = mysqli_fetch_array($query)) :
                         ?>
                         <tr>
+                            <td colspan="2" class="text-center">
+                            <img src="admin/guru/uploads/<?= $data['foto']; ?>" 
+                                alt="<?= $data['nama']; ?>" 
+                                class="rounded shadow-sm"
+                                style="width:200px; height:200px; object-fit:cover;">
+                            </td>
+                        </tr>
+                        <tr>
                             <td>Nama</td>
                             <td>: <?= $data['nama'] ?></td>
                         </tr>
                         <tr>
-                            <td>NISN</td>
-                            <td>: <?= $data['nisn'] ?></td>
+                            <td>NUPTK</td>
+                            <td>: <?= $data['nuptk'] ?></td>
                         </tr>
                         <tr>
-                            <td>NIS</td>
-                            <td>: <?= $data['nis'] ?></td>
+                            <td>NRG</td>
+                            <td>: <?= $data['nrg'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>: <?= $data['status'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Jabatan</td>
+                            <td>: <?= $data['jabatan'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Pangkat Golongan</td>
+                            <td>: <?= $data['pangkat'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Pendidikan</td>
+                            <td>: <?= $data['pendidikan'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Mata Pelajaran</td>
+                            <td>: <?= $data['mata_pelajaran'] ?></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
                             <td>: <?= $data['jenis_kelamin'] ?></td>
                         </tr>
                         <tr>
-                            <td>Tanggal Lahir</td>
-                            <td>: <?= $data['tgl_lahir'] ?></td>
-                        </tr>
-                        <tr>
                             <td>Agama</td>
                             <td>: <?= $data['agama'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Alamat</td>
-                            <td>: <?= $data['alamat'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Kota</td>
-                            <td>: <?= $data['kota'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Kodepos</td>
-                            <td>: <?= $data['kode_pos'] ?></td>
-                        </tr>
-                        <tr>
-                            <td>Kelas</td>
-                            <td>: <?= $data['kelas'] ?></td>
                         </tr>
                         <?php
                         endwhile;
                         ?>
                     </tbody>
                 </table>
-                <a class="btn btn-sm btn-info" href="data-siswa.php">Kembali</a>
+                <a class="btn btn-sm btn-info" href="data-guru.php">Kembali</a>
             </div>
         </section>
 
