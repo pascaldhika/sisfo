@@ -5,7 +5,7 @@ require_once '../helper/connection.php';
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>Tambah Guru</h1>
+    <h1>Tambah Siswa</h1>
     <a href="./index.php" class="btn btn-light">Kembali</a>
   </div>
   <div class="row">
@@ -15,11 +15,6 @@ require_once '../helper/connection.php';
           <!-- // Form -->
           <form action="./store.php" method="POST" enctype="multipart/form-data">
             <table cellpadding="8" class="w-100">
-
-              <tr>
-                <td>NIP</td>
-                <td><input class="form-control" type="text" name="nip" required></td>
-              </tr>
 
               <tr>
                 <td>Nama</td>
