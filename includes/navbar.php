@@ -10,7 +10,7 @@
 
         <!-- Desktop Menu -->
         <nav class="hidden md:flex space-x-6">
-            <a href="home.php" class="hover:text-yellow-300">Beranda</a>
+            <a href="home.php" class="hover:text-yellow-300">Home</a>
             <a href="agenda.php" class="hover:text-yellow-300">Agenda</a>
             <a href="berita.php" class="hover:text-yellow-300">Berita</a>
         </nav>
