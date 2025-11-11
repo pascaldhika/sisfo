@@ -43,9 +43,9 @@ if ($error === 0) {
 }
 
 if (isset($nama_file_baru)) {
-  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', status = '$status', nuptk = '$jabatan', jabatan = '$nuptk', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama', foto = '$nama_file_baru' WHERE id = '$id'");
+  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', status = '$status', jabatan = '$jabatan', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama', foto = '$nama_file_baru' WHERE id = '$id'");
 } else{
-  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', status = '$status', nuptk = '$jabatan', jabatan = '$nuptk', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama' WHERE id = '$id'");
+  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', status = '$status', jabatan = '$jabatan', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama' WHERE id = '$id'");
 }
 
 if ($query) {
