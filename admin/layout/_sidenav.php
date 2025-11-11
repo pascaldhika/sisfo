@@ -21,7 +21,6 @@
           <li><a class="nav-link" href="../kelas/index.php">Data Kelas</a></li>
         </ul>
       </li>
-      <li><a class="nav-link" href="../fasilitas/index.php"><i class="fas fa-book"></i> <span>Fasilitas</span></a></li>
       <li><a class="nav-link" href="../berita/index.php"><i class="fas fa-book"></i> <span>Berita</span></a></li>
       <li><a class="nav-link" href="../agenda/index.php"><i class="fas fa-book"></i> <span>Agenda</span></a></li>
       <li><a class="nav-link" href="../prestasi/index.php"><i class="fas fa-book"></i> <span>Prestasi</span></a></li>
