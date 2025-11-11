@@ -17,8 +17,6 @@
         <ul class="dropdown-menu">
           <li><a class="nav-link" href="../profil/index.php">Profil Sekolah</a></li>
           <li><a class="nav-link" href="../guru/index.php">Data Guru</a></li>
-          <li><a class="nav-link" href="../siswa/index.php">Data Siswa</a></li>
-          <li><a class="nav-link" href="../kelas/index.php">Data Kelas</a></li>
         </ul>
       </li>
       <li><a class="nav-link" href="../berita/index.php"><i class="fas fa-book"></i> <span>Berita</span></a></li>

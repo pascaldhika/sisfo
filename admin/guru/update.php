@@ -6,10 +6,8 @@ $id = $_POST['id'];
 $nip = $_POST['nip'];
 $nama = $_POST['nama'];
 $nuptk = $_POST['nuptk'];
-$nrg = $_POST['nrg'];
 $status = $_POST['status'];
 $jabatan = $_POST['jabatan'];
-$pangkat = $_POST['pangkat'];
 $pendidikan = $_POST['pendidikan'];
 $mata_pelajaran = $_POST['mata_pelajaran'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
@@ -45,9 +43,9 @@ if ($error === 0) {
 }
 
 if (isset($nama_file_baru)) {
-  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', nrg = '$nrg', status = '$status', nuptk = '$jabatan', jabatan = '$nuptk', pangkat = '$pangkat', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama', foto = '$nama_file_baru' WHERE id = '$id'");
+  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', status = '$status', nuptk = '$jabatan', jabatan = '$nuptk', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama', foto = '$nama_file_baru' WHERE id = '$id'");
 } else{
-  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', nrg = '$nrg', status = '$status', nuptk = '$jabatan', jabatan = '$nuptk', pangkat = '$pangkat', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama' WHERE id = '$id'");
+  $query = mysqli_query($connection, "UPDATE guru SET nip = '$nip', nama = '$nama', nuptk = '$nuptk', status = '$status', nuptk = '$jabatan', jabatan = '$nuptk', pendidikan = '$pendidikan', mata_pelajaran = '$mata_pelajaran', jenis_kelamin = '$jenis_kelamin', agama = '$agama' WHERE id = '$id'");
 }
 
 if ($query) {

@@ -34,12 +34,7 @@ $query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
 
                 <tr>
                   <td>NUPTK</td>
-                  <td><input class="form-control" type="text" name="nuptk" required value="<?= $row['nuptk'] ?>"></td>
-                </tr>
-
-                <tr>
-                  <td>NRG</td>
-                  <td><input class="form-control" type="text" name="nrg" required value="<?= $row['nrg'] ?>"></td>
+                  <td><input class="form-control" type="text" name="nuptk" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required value="<?= $row['nuptk'] ?>"></td>
                 </tr>
 
                 <tr>
@@ -57,11 +52,6 @@ $query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
                 <tr>
                   <td>Jabatan</td>
                   <td><input class="form-control" type="text" name="jabatan" required value="<?= $row['jabatan'] ?>"></td>
-                </tr>
-
-                <tr>
-                  <td>Pangkat Golongan</td>
-                  <td><input class="form-control" type="text" name="pangkat" required value="<?= $row['pangkat'] ?>"></td>
                 </tr>
 
                 <tr>

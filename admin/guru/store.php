@@ -5,10 +5,8 @@ require_once '../helper/connection.php';
 $nip = $_POST['nip'];
 $nama = $_POST['nama'];
 $nuptk = $_POST['nuptk'];
-$nrg = $_POST['nrg'];
 $status = $_POST['status'];
 $jabatan = $_POST['jabatan'];
-$pangkat = $_POST['pangkat'];
 $pendidikan = $_POST['pendidikan'];
 $mata_pelajaran = $_POST['mata_pelajaran'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
@@ -43,8 +41,8 @@ if ($error === 0) {
   }
 }
 
-$query = mysqli_query($connection, "INSERT INTO guru (nip, nama, nuptk, nrg, status, jabatan, pangkat, pendidikan, mata_pelajaran, jenis_kelamin, agama, foto) value
-                  ('$nip', '$nama', '$nuptk', '$nrg','$status', '$jabatan', '$pangkat', '$pendidikan', '$mata_pelajaran', '$jenis_kelamin', '$agama', '$nama_file_baru')");
+$query = mysqli_query($connection, "INSERT INTO guru (nip, nama, nuptk, status, jabatan, pendidikan, mata_pelajaran, jenis_kelamin, agama, foto) value
+                  ('$nip', '$nama', '$nuptk', '$status', '$jabatan', '$pendidikan', '$mata_pelajaran', '$jenis_kelamin', '$agama', '$nama_file_baru')");
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',

@@ -28,12 +28,7 @@ require_once '../helper/connection.php';
 
               <tr>
                 <td>NUPTK</td>
-                <td><input class="form-control" type="text" name="nuptk" required></td>
-              </tr>
-
-              <tr>
-                <td>NRG</td>
-                <td><input class="form-control" type="text" name="nrg" required></td>
+                <td><input class="form-control" type="text" name="nuptk" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required></td>
               </tr>
 
           <tr>
@@ -49,11 +44,6 @@ require_once '../helper/connection.php';
               <tr>
                 <td>Jabatan</td>
                 <td><input class="form-control" type="text" name="jabatan" required></td>
-              </tr>
-
-              <tr>
-                <td>Pangkat Golongan</td>
-                <td><input class="form-control" type="text" name="pangkat" required></td>
               </tr>
 
               <tr>
