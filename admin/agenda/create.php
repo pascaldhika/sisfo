@@ -14,7 +14,7 @@ require_once '../helper/connection.php';
         <div class="card-body">
           <!-- // Form -->
           <form action="./store.php" method="POST" enctype="multipart/form-data">
-            <table cellpadding="8" class="w-100">
+            <table cellpadding="8" class="w-1000">
 
               <tr>
                 <td>Judul Agenda</td>

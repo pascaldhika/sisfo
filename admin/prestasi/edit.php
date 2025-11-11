@@ -39,7 +39,7 @@ $query = mysqli_query($connection, "SELECT * FROM prestasi WHERE id='$id'");
 
                 <tr>
                   <td></td>
-                  <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                  <td><img src="uploads/<?= $row['foto'] ?>" alt="Logo" width="300"></td>
                 </tr>
                 
                 <tr>

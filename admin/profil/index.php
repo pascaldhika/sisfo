@@ -34,7 +34,7 @@ $query = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
 
                 <tr>
                   <td></td>
-                  <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                  <td><img src="uploads/<?= $row['foto'] ?>" alt="Logo" width="300"></td>
                 </tr>
 
                 <tr>
@@ -47,10 +47,7 @@ $query = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
                   <td><textarea class="form-control" name="pendaftaran" id="pendaftaran"><?= $row['pendaftaran'] ?></textarea></td>
                 </tr>
 
-                <tr>
-                  <td>Tata Tertib Sekolah</td>
-                  <td><textarea class="form-control" name="tata_tertib" id="tata_tertib"><?= $row['tata_tertib'] ?></textarea></td>
-                </tr>
+              
 
                 <tr>
                   <td>Struktur Organisasi</td>
@@ -59,7 +56,7 @@ $query = mysqli_query($connection, "SELECT * FROM profil LIMIT 1");
 
                 <tr>
                   <td></td>
-                  <td><img src="uploads/<?= $row['struktur'] ?>" alt="logo" width="300"></td>
+                  <td><img src="uploads/<?= $row['struktur'] ?>" alt="Logo" width="300"></td>
                 </tr>
                 
                 <tr>
@@ -132,12 +129,5 @@ endif;
     })
     .catch(error => console.error(error));
 
-  ClassicEditor
-    .create(document.querySelector('#tata_tertib'), {
-      toolbar: [
-        'heading', '|', 'bold', 'italic', 'underline', 'link', 'bulletedList', 'numberedList',
-        '|', 'blockQuote', 'insertTable', 'undo', 'redo'
-      ],
-    })
-    .catch(error => console.error(error));
+ 
 </script>

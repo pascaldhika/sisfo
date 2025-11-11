@@ -5,7 +5,7 @@ require_once '../helper/connection.php';
 $isi = $_POST['isi'];
 $visi_misi = $_POST['visi_misi'];
 $pendaftaran = $_POST['pendaftaran'];
-$tata_tertib = $_POST['tata_tertib'];
+
 
 // Ambil data file
 $nama_file = $_FILES['foto']['name'];
@@ -52,7 +52,7 @@ if ($error2 === 0) {
   }
 }
 
-$query = mysqli_query($connection, "UPDATE profil SET isi = '$isi', visi_misi = '$visi_misi', pendaftaran = '$pendaftaran', tata_tertib = '$tata_tertib'");
+$query = mysqli_query($connection, "UPDATE profil SET isi = '$isi', visi_misi = '$visi_misi', pendaftaran = '$pendaftaran'");
 if (isset($nama_file_baru)) {
   $query2 = mysqli_query($connection, "UPDATE profil SET foto = '$nama_file_baru'");
 }

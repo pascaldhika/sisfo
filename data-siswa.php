@@ -3,6 +3,7 @@ require_once 'admin/helper/auth.php';
 require_once 'admin/helper/connection.php';
 
 $query = mysqli_query($connection, "SELECT * FROM siswa");
+
 ?>
 
 <!DOCTYPE html>

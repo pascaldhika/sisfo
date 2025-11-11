@@ -48,7 +48,9 @@ $query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
                     <select class="form-control" name="status" required>
                       <option value="">--Pilih Status--</option>
                       <option value="PNS" <?= $row['status'] == 'PNS' ? 'selected' : '' ?>>PNS</option>
-                    </select>
+                      <option value="Guru Honor" <?= $row['status'] == 'Guru Honor' ? 'selected' : '' ?>>Guru Honor</option>
+                     
+                      </select>
                   </td>
                 </tr>
 
@@ -110,7 +112,7 @@ $query = mysqli_query($connection, "SELECT * FROM guru WHERE id='$id'");
                 </tr>
 
                 <tr>
-                  <td><img src="uploads/<?= $row['foto'] ?>" alt="logo" width="300"></td>
+                  <td><img src="uploads/<?= $row['foto'] ?>" alt="Logo" width="300"></td>
                 </tr>
                 
                 <tr>

@@ -36,16 +36,16 @@ require_once '../helper/connection.php';
                 <td><input class="form-control" type="text" name="nrg" required></td>
               </tr>
 
-              <tr>
+          <tr>
                 <td>Status</td>
                 <td>
                   <select class="form-control" name="status" required>
                     <option value="">--Pilih Status--</option>
                     <option value="PNS">PNS</option>
-                  </select>
+                    <option value="Guru Honor">Guru Honor</option>
+                    </select>
                 </td>
               </tr>
-
               <tr>
                 <td>Jabatan</td>
                 <td><input class="form-control" type="text" name="jabatan" required></td>

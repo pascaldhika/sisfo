@@ -1,6 +1,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title><?php echo $page_title ?? 'SMA Negeri Nusantara'; ?></title>
+<title><?php echo $page_title ?? 'SD Muhammadiyah Malawili'; ?></title>
 
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>

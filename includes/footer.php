@@ -5,8 +5,8 @@
         <!-- Kolom 1: Logo dan Deskripsi -->
         <div>
             <div class="flex items-center gap-3 mb-3">
-                <img src="admin/assets/img/logo.png" alt="Logo Sekolah" class="w-12 h-12">
-                <h4 class="text-lg font-semibold">SMA Negeri Nusantara</h4>
+                <img src="admin/assets/img/Logo.jpg" alt="Logo Sekolah" class="w-12 h-12">
+                <h4 class="text-lg font-semibold">SD Muhammadiyah Malawili</h4>
             </div>
             <p class="text-sm text-gray-200 leading-relaxed">
                 Sekolah unggulan berlandaskan nilai-nilai kejujuran, disiplin, dan kreativitas
@@ -39,6 +39,6 @@
 
     <!-- Copyright -->
     <div class="bg-blue-950 text-center text-gray-300 text-sm py-3">
-        © 2025 SMA Negeri 1 Nusantara. All rights reserved.
+        © 2025 SD Muhammadiyah Malawili. All rights reserved.
     </div>
 </footer>

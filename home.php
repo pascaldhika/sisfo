@@ -40,9 +40,9 @@ $postingan = mysqli_query($connection, "SELECT * FROM postingan ORDER BY id DESC
                 <!-- Teks Utama -->
                 <div class="relative text-center text-white px-4 sm:px-6">
                     <h2 class="text-3xl sm:text-5xl font-bold mb-3 drop-shadow-lg">
-                        Profil SMA N 1 Nusantara
+                        SD MUHAMMADIYAH MALAWILI
                     </h2>
-                    <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-200">
+                    <p class="max-w-3x2 mx-auto text-base sm:text-lg text-gray-100">
                         <?= $row['isi'] ?>
                     </p>
                     <!-- <button class="mt-5 sm:mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-yellow-400 text-blue-900 font-semibold hover:bg-yellow-300 transition">
@@ -61,7 +61,7 @@ $postingan = mysqli_query($connection, "SELECT * FROM postingan ORDER BY id DESC
                     Sambutan Kepala Sekolah
                 </h3>
                 <div class="p-5 flex flex-col items-center text-center space-y-3">
-                    <img src="images/kepsek.png" alt="Kepala Sekolah" class="w-48 h-48 rounded-full object-cover">
+                    <img src="images/Kepsek.jpg" alt="Kepala Sekolah" class="w-48 h-48 rounded-full object-cover">
                     <p class="text-gray-700 text-sm leading-relaxed">
                         Selamat datang di website resmi sekolah kami. Mari bersama-sama membangun generasi unggul, berkarakter, dan berprestasi.
                     </p>
@@ -101,10 +101,10 @@ $postingan = mysqli_query($connection, "SELECT * FROM postingan ORDER BY id DESC
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl aspect-[3/4] relative">
                 <!-- Slider Container -->
                 <div class="relative w-full h-full overflow-hidden" id="bannerSlider">
-                    <img src="images/banner-1.png" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 slide active">
-                    <img src="images/banner-2.png" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slide">
-                    <img src="images/banner-3.png" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slide">
-
+                    <img src="images/benner-1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 slide active">
+                    <img src="images/benner-1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 slide active">
+                    <img src="images/benner-1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 slide active">
+                   
                     <!-- Tombol Navigasi -->
                     <button id="prevBtn" class="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition">
                         &#10094; <!-- Panah kiri -->
@@ -200,8 +200,8 @@ $postingan = mysqli_query($connection, "SELECT * FROM postingan ORDER BY id DESC
         <!-- VIDEO KEGIATAN -->
         <section class="max-w-7xl mx-auto mt-10 px-4" data-aos="fade-up">
             <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Video Kegiatan</h2>
+            <iframe src="https://www.facebook.com/plugins/video.php?height=317&href=https%3A%2F%2Fwww.facebook.com%2Ftriutamy.ridhonya%2Fvideos%2F828310156366410%2F%3Fidorvanity%3D525707368270051&show_text=false&width=560&t=0"
             <iframe class="w-full block rounded-none h-80 sm:h-[450px]"
-                src="https://www.youtube.com/embed/wDchsz8nmbo"
                 title="Video kegiatan sekolah"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -211,7 +211,7 @@ $postingan = mysqli_query($connection, "SELECT * FROM postingan ORDER BY id DESC
 
         <!-- INSTAGRAM -->
         <section class="max-w-7xl mx-auto mt-10 px-4" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Postingan Instagram Sekolah</h2>
+            <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Postingan Facebook Sekolah</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
                 <?php
@@ -231,7 +231,7 @@ $postingan = mysqli_query($connection, "SELECT * FROM postingan ORDER BY id DESC
             <h2 class="text-2xl font-bold text-center mb-10 text-blue-900">Maps Sekolah</h2>
             <div class="bg-white p-2 rounded-2xl shadow-lg overflow-hidden">
                 <iframe class="w-full h-64 sm:h-72 rounded-lg"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.070827303365!2d110.365!3d-7.808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDgnMjguOCJTIDExMMKwMjEnNTQuMCJF!5e0!3m2!1sid!2sid!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.082991333604!2d131.3197065!3d-0.9623567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d5bff29cdba793f%3A0x362ed133958704b1!2sSD%20MUHAMMADIYAH%20MALAWILI!5e1!3m2!1sid!2sid!4v1761669742890!5m2!1sid!2sid"
                     allowfullscreen="" loading="lazy">
                 </iframe>
             </div>

@@ -3,9 +3,9 @@
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div class="flex items-center space-x-3">
             <a href="home.php">
-                <img src="admin/assets/img/logo.png" alt="Logo Sekolah" class="rounded-full h-10">
+                <img src="admin/assets/img/Logo.jpg" alt="Logo Sekolah" class="rounded-full h-14">
             </a>
-            <h1 class="text-xl sm:text-2xl font-bold"><a href="home.php">SMA Negeri Nusantara</a></h1>
+            <h1 class="text-xl sm:text-2xl font-bold"><a href="home.php">SD Muhammadiyah Malawili</a></h1>
         </div>
 
         <!-- Navbar -->
@@ -33,8 +33,6 @@
                                 group-hover:translate-y-0 transition-all duration-300 ease-out">
                         <a href="visi-misi.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Visi, Misi dan Tujuan Sekolah</a>
                         <a href="data-guru.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Guru</a>
-                        <a href="data-siswa.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Peserta Didik</a>
-                        <a href="data-kelas.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Data Kelas</a>
                         <a href="struktur-organisasi.php" class="block px-4 py-2 hover:bg-yellow-300 hover:text-black transition-colors duration-200">Struktur Organisasi</a>
                     </div>
                 </div>

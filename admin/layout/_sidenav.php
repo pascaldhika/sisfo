@@ -2,7 +2,7 @@
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
       <a href="index.php">
-        <img src="../assets/img/logo.png" alt="logo" width="30">
+        <img src="../assets/img/Logo.jpg" alt="Logo" width="60">
       </a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
